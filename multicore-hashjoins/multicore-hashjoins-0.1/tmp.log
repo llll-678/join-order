@@ -1,0 +1,9 @@
+[INFO ] Creating relation R with size = 8192.000 MiB, #tuples = 1073741824 : OK 
+[INFO ] Creating relation S with size = 8192.000 MiB, #tuples = 1073741824 : OK 
+[INFO ] Running join algorithm NPO ...
+RUNTIME TOTAL, BUILD, PART (cycles): 
+8896331437 	 5096207060 	 0 
+MY-TOTAL-TIME-USECS: 3868012.0000 
+TOTAL-TIME-USECS, TOTAL-TUPLES, CYCLES-PER-TUPLE: 
+3868012.0000 	 1073741824 	 8.2854 
+[INFO ] Results = 1073741824. DONE.

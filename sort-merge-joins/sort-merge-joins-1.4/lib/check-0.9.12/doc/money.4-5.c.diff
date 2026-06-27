@@ -1,0 +1,46 @@
+--- src/money.4.c	2014-01-21 01:20:40.000000000 +0100
++++ src/money.5.c	2014-01-21 01:20:40.000000000 +0100
+@@ -1,31 +1,41 @@
+ #include <stdlib.h>
+ #include "money.h"
+ 
+ struct Money
+ {
+   int amount;
++  char *currency;
+ };
+ 
+ Money *
+ money_create (int amount, char *currency)
+ {
+-  return NULL;
++  Money *m = malloc (sizeof (Money));
++  if (m == NULL)
++    {
++      return NULL;
++    }
++
++  m->amount = amount;
++  m->currency = currency;
++  return m;
+ }
+ 
+ int
+ money_amount (Money * m)
+ {
+   return m->amount;
+ }
+ 
+ char *
+ money_currency (Money * m)
+ {
+-  return NULL;
++  return m->currency;
+ }
+ 
+ void
+ money_free (Money * m)
+ {
++  free (m);
+   return;
+ }
